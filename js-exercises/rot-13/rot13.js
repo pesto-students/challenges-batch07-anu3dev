@@ -1,12 +1,6 @@
-function rot13(args) 
-{
-    // variable for shifting 13 places
+function rot13(args) {
+    //variable for shifting 13 places
     let place = 13;
-    let 
-  // Wrap the place
-  if (place < 0) {
-    return rot13(args, place + 26);
-  }
   // Make an output variable
   let output = "";
   // Go through each character
@@ -38,7 +32,6 @@ function rot13(args)
   return output;
 }
 
-export 
-{
+export {
   rot13,
 };
