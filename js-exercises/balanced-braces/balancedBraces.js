@@ -1,9 +1,9 @@
 function balancedBraces(args) {
-  const openBraces = ["(", "[", "{"];
-  const closeBraces = [")", "]", "}"];
+  const openBraces = ['(', '[', '{'];
+  const closeBraces = [')', ']', '}'];
   const stack = [];
 
-  for (let i = 0; i < args.length; i++) {
+  for (let i = 0; i < args.length; i += 1) {
     const character = args[i];
 
     if (openBraces.includes(character)) {

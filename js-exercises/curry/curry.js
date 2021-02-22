@@ -1,14 +1,12 @@
 function curry(fn) {
-  return function curriedSolution(...value1) {
-    if (value1.length >= fn.length) {
-      return fn.apply(this, value1);
+  return function curriedSolution(...value) {
+    if (fn.length <= value.length) {
+      return fn(...value);
     }
-    return function curried(...value2) {
-      return curriedSolution.apply(this, value1.concat(value2));
+    return function curried(...moreValue) {
+      return curriedSolution(...value, ...moreValue);
     };
   };
 }
 
-export {
-  curry,
-};
+export { curry };
